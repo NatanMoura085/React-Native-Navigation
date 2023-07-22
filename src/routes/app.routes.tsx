@@ -8,7 +8,7 @@ export default function StackRoutes() {
   return (
     <Navigator>
       <Screen name="login" component={login} options={{headerTitleAlign:'center',headerShown:false}}/>
-      <Screen name="tabroute" component={TabRoute}  options={{headerTitleAlign:'center'}}/>
+      <Screen name="tabroute" component={TabRoute}  options={{headerTitleAlign:'center',headerShown:false}}/>
     </Navigator>
   );
 }

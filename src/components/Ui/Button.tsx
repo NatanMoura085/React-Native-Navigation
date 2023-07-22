@@ -14,7 +14,7 @@ export const TouchableOpacityBtn: React.FC<Btn> = ({ Label, onPress, className})
   return (
     <StyledComponent
       component={TouchableOpacity}
-      className={`w-full justify-center items-center py-4 px-2 my-2 rounded-md border border-slate-300`}
+      className={` bg-[#299272] w-full justify-center items-center py-4 px-2 my-2 rounded-lg `}
       onPress={()=> navigate('tabroute')}
   
     >
