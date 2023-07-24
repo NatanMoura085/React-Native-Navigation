@@ -1,10 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import login from "../screen//login/login";
-
 import TabRoute from "./tab.routes";
 import Splash from "../screen/splash/splash";
-import Loading from "../components/Ui/loading";
-import { useEffect, useState } from "react";
 
 export default function StackRoutes() {
   const { Screen, Navigator } = createNativeStackNavigator();

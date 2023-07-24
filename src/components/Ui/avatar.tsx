@@ -1,11 +1,16 @@
-import { View, Image,Text } from "react-native";
+import { View, Image, Text } from "react-native";
 
 export default function Avatar() {
   return (
-    <View>
-      <Image source={require("../../../assets/avatar.png")}  style={{width:55, height:55,borderRadius:20}}/>
-      <Text>Natan Moura</Text>
-      <Text>pattient</Text>
+    <View className="flex flex-row gap-2 -mx-5">
+      <Image
+        source={require("../../../assets/avatar.png")}
+        style={{ width: 55, height: 55, borderRadius: 20 }}
+      />
+      <View>
+        <Text className="font-semibold">Natan Moura</Text>
+        <Text className="font-thin">pattient</Text>
+      </View>
     </View>
   );
 }

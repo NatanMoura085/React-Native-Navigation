@@ -7,7 +7,6 @@ export default function Loading() {
         source={require("../../assets/loading2.json")}
         autoPlay
         loop
-        
       />
     </View>
   );

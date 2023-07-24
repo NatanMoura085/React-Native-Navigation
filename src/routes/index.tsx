@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import  StackRoutes  from "./app.routes";
 import { useEffect, useState } from "react";
-import Loading from "../components/Ui/loading";
+import Loading from "../components/Ui/Loading";
 export default function Routes() {
   const [isLoading, setLoading] = useState(true);
 
