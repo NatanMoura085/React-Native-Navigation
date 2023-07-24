@@ -6,6 +6,7 @@ export declare global {
             login: undefined;
             tabroute:undefined;
             splash:undefined;
+            loading:undefined;
          
         }
     }
