@@ -5,6 +5,7 @@ export declare global {
             store:undefined;
             login: undefined;
             tabroute:undefined;
+            splash:undefined;
          
         }
     }
