@@ -11,6 +11,7 @@ export default function Splash() {
         loop={false}
         onAnimationFinish={() => navigate("login")}
         resizeMode="cover"
+       duration={0.5}
       />
     </>
   );

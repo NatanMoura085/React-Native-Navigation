@@ -14,6 +14,7 @@ export default function TabRoute() {
         name="home"
         component={Home}
         options={{
+          headerShown:false,
           tabBarLabel: "home",
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="home" color={color} size={size} />
