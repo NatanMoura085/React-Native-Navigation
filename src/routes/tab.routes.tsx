@@ -7,62 +7,69 @@ import Appointment from "../screen/appointment/appointment";
 import Calendar from "../screen/calendar/calendar";
 import Settings from "../screen/settings/settings";
 export default function TabRoute() {
-  const { Screen, Navigator } = createBottomTabNavigator();
+  const { Screen, Navigator, Group } = createBottomTabNavigator();
   return (
     <Navigator>
-      <Screen
-        name="home"
-        component={Home}
-        options={{
-          headerShown:false,
-          tabBarLabel: "home",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Screen
-        name="messenger"
-        component={Messenger}
-        options={{
-          tabBarLabel: "messenger",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="facebook-messenger" color={color} size={size} />
-          ),
-        }}
-      />
+      <Group screenOptions={{ tabBarActiveTintColor: "#289171" }}>
+        <Screen
+          name="home"
+          component={Home}
+          options={{
+            headerShown: false,
+            tabBarLabel: "home",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="home" color={color} size={(size = 30)} />
+            ),
+          }}
+        />
+        <Screen
+          name="messenger"
+          component={Messenger}
+          options={{
+            tabBarLabel: "messenger",
 
-      <Screen
-        name="appointment"
-        component={Appointment}
-        options={{
-          tabBarLabel: "appointment",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add-circle" color={color} size={size = 37}/>
-          ),
-        }}
-      />
-      <Screen
-        name="calendario"
-        component={Calendar}
-        options={{
-          tabBarLabel: "calendario",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="calendar" color={color} size={size} />
-          ),
-        }}
-      />
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5
+                name="facebook-messenger"
+                color={color}
+                size={(size = 26)}
+              />
+            ),
+          }}
+        />
 
-      <Screen
-        name="settings"
-        component={Settings}
-        options={{
-          tabBarLabel: "settings",
-          tabBarIcon: ({ color, size  }) => (
-            <Ionicons name="settings-sharp" color={color} size={size} />
-          ),
-        }}
-      />
+        <Screen
+          name="appointment"
+          component={Appointment}
+          options={{
+            tabBarLabel: "appointment",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="add-circle" color={color} size={37} />
+            ),
+          }}
+        />
+        <Screen
+          name="calendario"
+          component={Calendar}
+          options={{
+            tabBarLabel: "calendario",
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="calendar" color={color} size={size} />
+            ),
+          }}
+        />
+
+        <Screen
+          name="settings"
+          component={Settings}
+          options={{
+            tabBarLabel: "settings",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="settings-sharp" color={color} size={size} />
+            ),
+          }}
+        />
+      </Group>
     </Navigator>
   );
 }

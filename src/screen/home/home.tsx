@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <View className="bg-[#f5f5f5] h-full w-full  my-10">
       <Header />
-      <EmotionList/>
+      <EmotionList />
     </View>
   );
 }
