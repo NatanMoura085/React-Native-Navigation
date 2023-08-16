@@ -8,8 +8,8 @@ interface DayMonthProps extends ViewProps {
 const DayMonth = ({ day, month, ...rest }: DayMonthProps) => {
   return (
     <View {...rest} className="bg-customCinza w-16 h-20 rounded-2xl flex items-center justify-center">
-      <Text>{day}</Text>
-      <Text>{month}</Text>
+      <Text className="text-white font-Inter800">{day}</Text>
+      <Text className="text-white font-Inter800">{month}</Text>
     </View>
   );
 };

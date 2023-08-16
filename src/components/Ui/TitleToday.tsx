@@ -5,7 +5,7 @@ interface TitleToday {
   title: string;
   className:string;
 }
-const TitleToday = ( { title, className, ...rest  }: TitleToday, ) => {
+const TitleToday = ( { title, className, ...rest  }: TitleToday ) => {
   return (
     <StyledComponent component={Text} className="" {...rest}>
       {title}

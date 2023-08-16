@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./App.{js,jsx,ts,tsx}",
@@ -15,6 +16,12 @@ module.exports = {
         customRed: "#FF0000", 
        
       },
+      fontFamily:{
+        Inter400: "Inter_400Regular",
+        Inter600: "Inter_600SemiBold",
+        Inter700: "Inter_700Bold",
+        Inter800: "Inter_800ExtraBold"
+      }
     },
   },
   plugins: [],
