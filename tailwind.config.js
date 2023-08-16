@@ -6,7 +6,16 @@ module.exports = {
     "./<custom directory>/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      customStyles: {
+        'flex-item-center': 'flex items-center', 
+      },
+      colors: {
+        customCinza: "#78827e",
+        customRed: "#FF0000", 
+       
+      },
+    },
   },
   plugins: [],
 }
