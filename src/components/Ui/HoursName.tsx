@@ -6,9 +6,9 @@ interface HoursNameProps extends ViewProps {
 }
 const HoursName = ({ hours, name, ...rest }: HoursNameProps) => {
   return (
-    <View {...rest} className="bg-customCinza w-56 h-20 rounded-2xl px-3 py-2">
+    <View {...rest} className="bg-customCinza w-56 h-20 rounded-3xl px-3 py-4">
       <Text className="font-Inter800 text-white">{hours}</Text>
-      <Text className="font-Inter600 text-white">{name}</Text>
+      <Text className=" font-thin font-Inter400 text-white">{name}</Text>
     </View>
   );
 };
