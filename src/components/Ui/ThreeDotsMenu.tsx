@@ -1,16 +1,16 @@
 import {Octicons} from "@expo/vector-icons"
-import { View } from "react-native"
+import { TouchableOpacity } from "react-native"
 
 interface ThreeDotsMenu{
 
-
+onPress:()=>void
 }
-const ThreeDotsMenu = ()=>{
+const ThreeDotsMenu = ({ ...rest}:ThreeDotsMenu)=>{
 
     return(
-        <View className=" ">
+        <TouchableOpacity className=" "{...rest}>
             <Octicons name="kebab-horizontal" size={25} style={{ color: "rgb(228, 237, 237)" }}/>
-        </View>
+        </TouchableOpacity>
     )
 }
 
