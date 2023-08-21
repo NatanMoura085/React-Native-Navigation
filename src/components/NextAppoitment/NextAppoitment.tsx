@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { useState} from "react"
+import { useState } from "react";
 import TitleToday from "../Ui/TitleToday";
 import DayMonth from "../Ui/DayMonth";
 import HoursName from "../Ui/HoursName";
@@ -7,10 +7,16 @@ import ThreeDotsMenu from "../Ui/ThreeDotsMenu";
 import DropDownDots from "../Ui/DropDownDots";
 
 const NextAppoitment = () => {
-  const [isOpen,setOpen] = useState(false)
-  const HandleClik = ()=>{
-    setOpen(prev => !prev)
-  }
+  const [isOpen, setOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("00:00");
+  const HandleClik = () => {
+    setOpen((prev) => !prev);
+  };
+  const handleOptionSelect = (optionValue: string) => {
+   console.log(optionValue)
+    setSelectedValue(optionValue);
+    setOpen(false);
+  };
   return (
     <View className="h-44 w-screen bg-[#1c2d27] rounded-2xl">
       <TitleToday
@@ -19,8 +25,12 @@ const NextAppoitment = () => {
       />
       <View className="flex flex-row ">
         <DayMonth day={11} month="apr" className="p-1 mx-7 " />
-        <HoursName hours="12:40" name="Natan moura" Icon={<ThreeDotsMenu onPress={HandleClik}/>}/>
-        {isOpen && <DropDownDots />}
+        <HoursName
+          hours={selectedValue}
+          name="Natan moura"
+          Icon={<ThreeDotsMenu onPress={HandleClik} />}
+        />
+        {isOpen && <DropDownDots onPress={handleOptionSelect} />}
       </View>
     </View>
   );
