@@ -5,6 +5,7 @@ import EmotionList from "../../components/EmotionList/Emotion";
 import TitleToday from "../../components/Ui/TitleToday";
 import NextAppoitment from "../../components/NextAppoitment/NextAppoitment";
 
+
 export default function Home() {
   return (
     <View className="bg-[#f5f5f5] h-full w-full  my-10">
@@ -18,7 +19,7 @@ export default function Home() {
       <EmotionList />
       <View className="mt-4">
       <NextAppoitment/>
-        
+     
       </View>
     </View>
   );
