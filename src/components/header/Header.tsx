@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
-import Avatar from "../Ui/Avatar";
-import BellIcon from "../Ui/Bellicon";
+import Avatar from "../Ui/avatar";
+import BellIcon from "../Ui/bellicon";
 
 export default function Header() {
   return (
