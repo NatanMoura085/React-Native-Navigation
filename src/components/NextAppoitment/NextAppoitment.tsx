@@ -18,7 +18,7 @@ const NextAppoitment = () => {
     setOpen(false);
   };
   return (
-    <View className="h-44 w-screen bg-[#1c2d27] rounded-2xl absolute">
+    <View className="h-44 w-screen bg-[#1c2d27] rounded-2xl  absolute">
       <TitleToday
         title="Next Appointment"
         className="text-white px-7 py-4 text-lg font-Inter800"

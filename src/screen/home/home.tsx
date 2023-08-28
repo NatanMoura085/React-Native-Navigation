@@ -10,9 +10,9 @@ import SwipeablePanel from "../../components/SwipeablePanel/SwipeablePanel";
 export default function Home() {
   return (
     <>
-      <View className="bg-[#f5f5f5] h-full w-full  my-10  ">
+      <View className="bg-[#f5f5f5] h-full w-full  my-10 ">
         <Header />
-        <View className="px-6 ">
+        <View className="px-6">
           <TitleToday
             title="How Do You Feel Today?"
             className="text-slate-800 bottom-2 mb-2 text-lg font-bold"

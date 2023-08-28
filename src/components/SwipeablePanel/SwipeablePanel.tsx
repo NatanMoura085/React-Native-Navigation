@@ -1,14 +1,15 @@
 import React, { useRef } from "react";
-import { View, Dimensions, TouchableOpacity } from "react-native";
+import { View, Dimensions, TouchableOpacity, Text } from "react-native";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
+import CardPratices from "../PraticesCard/CardPratices";
 const { width, height } = Dimensions.get("window");
 function SwipeablePanel() {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   return (
-    <View className="flex-1">
-      <TouchableOpacity className="flex-row  items-center p-3 justify-between pr-5  "
+    <View className="flex-1 ">
+      <TouchableOpacity className="flex-row  items-center p-3 justify-between pr-5"
 
         activeOpacity={0.9}
         onPress={() => {
@@ -20,12 +21,12 @@ function SwipeablePanel() {
       <BottomSheet
         ref={bottomSheetRef}
         index={1}
-        snapPoints={[60, 100, height, 660]}
-        backgroundStyle={{ backgroundColor: "grey" }}
-        handleIndicatorStyle={{ backgroundColor: "red" }}
+        snapPoints={[70, 100, height, 660]}
+        backgroundStyle={{ backgroundColor: "white" }}
+        handleIndicatorStyle={{ backgroundColor: "grey", width: 60, height: 7 }}
         enableHandlePanningGesture
       >
-
+        <CardPratices border={true} text="dd" source={require("../../../assets/meditation.png")} backGround="blue-500" />
       </BottomSheet>
     </View>
   );
