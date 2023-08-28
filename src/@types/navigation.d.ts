@@ -7,6 +7,7 @@ export declare global {
             tabroute:undefined;
             splash:undefined;
             loading:undefined;
+            SwipeablePanel:undefined
          
         }
     }
