@@ -13,7 +13,8 @@ module.exports = {
       },
       colors: {
         customCinza: "#78827e",
-        customRed: "#FF0000", 
+        customRed: "#FF0000",
+        brightBlueCard: "#c3f1cc"
        
       },
       fontFamily:{

@@ -19,14 +19,15 @@ function SwipeablePanel() {
 
       </TouchableOpacity>
       <BottomSheet
+     
         ref={bottomSheetRef}
         index={1}
         snapPoints={[70, 100, height, 660]}
         backgroundStyle={{ backgroundColor: "white" }}
-        handleIndicatorStyle={{ backgroundColor: "grey", width: 60, height: 7 }}
+        handleIndicatorStyle={{ backgroundColor: "grey", width: 60, height:7 }}
         enableHandlePanningGesture
       >
-        <CardPratices border={true} text="dd" source={require("../../../assets/meditation.png")} backGround="blue-500" />
+        <CardPratices  min={"20:30"} border={true} text="Meditation" source={require("../../../assets/meditation.png")} className="bg-brightBlueCard" />
       </BottomSheet>
     </View>
   );
