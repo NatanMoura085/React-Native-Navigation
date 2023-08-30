@@ -8,14 +8,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '999': '999',
+      },
       customStyles: {
         'flex-item-center': 'flex items-center', 
       },
       colors: {
         customCinza: "#78827e",
         customRed: "#FF0000",
-        brightBlueCard: "#c3f1cc"
-       
+        brightBlueCard: "#c3f1cc",
+        BurntYellow:"#e5eec1",
+        LightBlue:"#abedea",
+        LightBlue2:"#bfe8ef"
       },
       fontFamily:{
         Inter400: "Inter_400Regular",

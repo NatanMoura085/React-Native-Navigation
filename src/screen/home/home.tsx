@@ -1,12 +1,12 @@
 import Icon from "react-native-vector-icons/AntDesign";
-import { View } from "react-native";
+import { Text, View } from "react-native";
+import { lazy, Suspense } from "react"
 import Header from "../../components/header/Header";
 import EmotionList from "../../components/EmotionList/Emotion";
 import TitleToday from "../../components/Ui/TitleToday";
 import NextAppoitment from "../../components/NextAppoitment/NextAppoitment";
-import SwipeablePanel from "../../components/SwipeablePanel/SwipeablePanel";
 
-
+const SwipeablePanelEdit = lazy(() => import("../../components/SwipeablePanel/SwipeablePanel"))
 export default function Home() {
   return (
     <>
@@ -23,7 +23,10 @@ export default function Home() {
           <NextAppoitment />
 
         </View>
-        <SwipeablePanel />
+        <Suspense fallback={<Text>Loading...</Text>}>
+          <SwipeablePanelEdit />
+
+        </Suspense>
       </View>
 
 

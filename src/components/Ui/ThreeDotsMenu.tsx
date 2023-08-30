@@ -6,7 +6,7 @@ interface ThreeDotsMenu {
 }
 const ThreeDotsMenu = ({ ...rest }: ThreeDotsMenu) => {
   return (
-    <TouchableOpacity {...rest}>
+    <TouchableOpacity {...rest} >
       <Octicons
         name="kebab-horizontal"
         size={25}
