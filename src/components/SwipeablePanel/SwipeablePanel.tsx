@@ -6,7 +6,7 @@ import CardPratices from "../PraticesCard/CardPratices";
 const { width, height } = Dimensions.get("window");
 function SwipeablePanel() {
   const bottomSheetRef = useRef<BottomSheet>(null);
-
+console.log(height)
   return (
     <View className="flex-1 ">
       <TouchableOpacity className="flex-row  items-center p-3 justify-between pr-5"
@@ -20,10 +20,11 @@ function SwipeablePanel() {
       <BottomSheet
         ref={bottomSheetRef}
         index={1}
-        snapPoints={[60, 100, height, 660]}
+        snapPoints={[60, 1, height, 700]}
         backgroundStyle={{ backgroundColor: "white" }}
         handleIndicatorStyle={{ backgroundColor: "grey", width: 60, height: 7 }}
         enableHandlePanningGesture
+        
       >
         <ScrollView className="">
           <View className="flex flex-row">

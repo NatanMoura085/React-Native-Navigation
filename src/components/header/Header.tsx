@@ -4,7 +4,7 @@ import BellIcon from "../Ui/bellicon";
 
 export default function Header() {
   return (
-    <View className=" w-full p-7 flex  items-center flex-row justify-between">
+    <View className=" w-full p-7 flex  items-center flex-row justify-between ">
       <Avatar
         source={require("../../../assets/avatar.png")}
         title="Natan Moura"

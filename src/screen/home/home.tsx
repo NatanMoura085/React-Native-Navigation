@@ -17,8 +17,8 @@ export default function Home() {
             title="How Do You Feel Today?"
             className="text-slate-800 bottom-2 mb-2 text-lg font-bold"
           />
-        </View>
         <EmotionList />
+        </View>
         <View className="mt-4">
           <NextAppoitment />
 

@@ -2,7 +2,7 @@ import { Image, Text, View, TouchableOpacity } from "react-native";
 
 export default function EmotionList() {
   return (
-    <View className="flex flex-row justify-center gap-11 ">
+    <View className="flex flex-row justify-center gap-11  ">
       <TouchableOpacity>
         <View className="flex flex-col items-center">
           <Image
