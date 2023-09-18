@@ -1,30 +1,34 @@
 import React, { useRef } from "react";
 import { View, Dimensions, TouchableOpacity, Text, FlatList, ScrollView } from "react-native";
-import BottomSheet from "@gorhom/bottom-sheet";
+import {
+  BottomSheetModal,
+  BottomSheetModalProvider
+} from "@gorhom/bottom-sheet";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 import CardPratices from "../PraticesCard/CardPratices";
 const { width, height } = Dimensions.get("window");
+
 function SwipeablePanel() {
-  const bottomSheetRef = useRef<BottomSheet>(null);
-console.log(height)
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+  console.log(height)
+  const snapPoints = ['90%']
+
   return (
-    <View className="flex-1 ">
-      <TouchableOpacity className="flex-row  items-center p-3 justify-between pr-5"
+    <BottomSheetModalProvider>
+      <TouchableOpacity className="flex-1 flex-row  items-center p-3 justify-between pr-5"
         activeOpacity={0.9}
         onPress={() => {
-          bottomSheetRef.current?.expand();
+          bottomSheetModalRef.current?.present()
         }}
       >
 
       </TouchableOpacity>
-      <BottomSheet
-        ref={bottomSheetRef}
-        index={1}
-        snapPoints={[60, 1, height, 700]}
+      <BottomSheetModal
+        ref={bottomSheetModalRef}
+        index={0}
+        snapPoints={snapPoints}
         backgroundStyle={{ backgroundColor: "white" }}
         handleIndicatorStyle={{ backgroundColor: "grey", width: 60, height: 7 }}
-        enableHandlePanningGesture
-        
       >
         <ScrollView className="">
           <View className="flex flex-row">
@@ -37,9 +41,9 @@ console.log(height)
             <CardPratices min={"20:30"} border={true} text="Deep Breathing" source={require("../../../assets/deep-breathing.png")} className="bg-LightBlue2" />
           </View>
         </ScrollView>
-      </BottomSheet>
-    </View>
+      </BottomSheetModal>
+    </BottomSheetModalProvider>
   );
 }
 
-export default gestureHandlerRootHOC(SwipeablePanel);
+export default SwipeablePanel;

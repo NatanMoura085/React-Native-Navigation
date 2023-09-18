@@ -18,12 +18,12 @@ const NextAppoitment = () => {
     setOpen(false);
   };
   return (
-    <View className="h-44 w-screen bg-[#1c2d27] rounded-2xl  absolute">
+    <View className="h-44 w-screen bg-[#1c2d27] rounded-2xl">
       <TitleToday
         title="Next Appointment"
         className="text-white px-7 py-4 text-lg font-Inter800"
       />
-      <View className="flex flex-row ">
+      <View className="flex-row ">
         <DayMonth day={11} month="apr" className="p-1 mx-7 " />
         <HoursName
           hours={selectedValue}

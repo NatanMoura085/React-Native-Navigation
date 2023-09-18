@@ -10,14 +10,14 @@ const SwipeablePanelEdit = lazy(() => import("../../components/SwipeablePanel/Sw
 export default function Home() {
   return (
     <>
-      <View className="bg-[#f5f5f5] h-full w-full  my-10 ">
+      <View className="bg-[#f5f5f5] h-screen w-screen my-10">
         <Header />
         <View className="px-6">
           <TitleToday
             title="How Do You Feel Today?"
             className="text-slate-800 bottom-2 mb-2 text-lg font-bold"
           />
-        <EmotionList />
+          <EmotionList />
         </View>
         <View className="mt-4">
           <NextAppoitment />
@@ -25,7 +25,6 @@ export default function Home() {
         </View>
         <Suspense fallback={<Text>Loading...</Text>}>
           <SwipeablePanelEdit />
-
         </Suspense>
       </View>
 
